@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="arrayobjectone.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+        <th>First name</th>
+        <th>gender</th>
+        <th>Email</th>
+        <th>Age</th>
+        </tr>
+        <tbody id="lithesh">
+        </tbody>
+    </table>
+    <script>
+        buildTable(contact)
+        function buildTable(data){
+		var table = document.getElementById('lithesh')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+				<td>${data[i].name.first}</td>
+				<td>${data[i].gender}</td>
+                <td>${data[i].email}</td>
+                <td>${data[i].dob.age}</td>
+    	  </tr>`
+			table.innerHTML += row 
+
+	}
+
+
+        }
+        </script>
+</body>
+</html>
